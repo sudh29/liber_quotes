@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Close to Nature Color Palette */
+  --color-brand-green: #2d4a36; /* Sea Green (Rich Dark Forest) */
+  --color-brand-sage: #8f9e8b; /* Sage Green */
+  --color-brand-pistachio: #f4f6f0; /* Pistachio Background (Light Cozy Green/Cream) */
+  --color-brand-earth: #4a3e3d; /* Earth Brown (Cozy warm charcoal-cocoa) */
+  --color-brand-clay: #d07b50; /* Terracotta Clay (Warm rustic orange accent) */
+  --color-brand-pine-dark: #111d13; /* Deep Evergreen Forest Dark Mode background */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
