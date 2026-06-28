@@ -1,0 +1,6 @@
+{
+  "name": "Daily Quotes Publisher",
+  "description": "A comprehensive dashboard to manage, format, schedule, and publish authentic quotes from historic figures across social media platforms.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
