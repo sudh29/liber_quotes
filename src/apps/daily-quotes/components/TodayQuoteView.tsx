@@ -5,10 +5,9 @@ import { Quote } from '../types';
 
 interface TodayQuoteViewProps {
   quote: Quote | null;
-  onNavigateToLibrary?: () => void;
 }
 
-export function TodayQuoteView({ quote, onNavigateToLibrary }: TodayQuoteViewProps) {
+export function TodayQuoteView({ quote }: TodayQuoteViewProps) {
   if (!quote) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[50vh] text-center p-8 bg-brand-pistachio/30 dark:bg-brand-pine-dark/20 border border-brand-sage/20 dark:border-brand-sage/10 rounded-3xl max-w-lg mx-auto">
@@ -17,16 +16,8 @@ export function TodayQuoteView({ quote, onNavigateToLibrary }: TodayQuoteViewPro
         </div>
         <h3 className="text-xl font-bold font-sans text-brand-earth dark:text-brand-pistachio">Active Repository is Empty</h3>
         <p className="text-sm font-sans text-brand-earth/75 dark:text-brand-sage/80 mt-2 max-w-sm">
-          Please navigate to the Quote Repository tab to upload or write verified historical quotes first.
+          No quotes are available in the curated daily quote set.
         </p>
-        {onNavigateToLibrary && (
-          <button
-            onClick={onNavigateToLibrary}
-            className="mt-6 px-5 py-2.5 bg-brand-green hover:bg-brand-green/90 dark:bg-brand-sage dark:hover:bg-brand-sage/90 active:scale-95 text-brand-pistachio dark:text-brand-pine-dark text-xs font-bold rounded-xl cursor-pointer shadow-sm transition-all duration-200"
-          >
-            Go to Quote Repository
-          </button>
-        )}
       </div>
     );
   }
